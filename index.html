@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Landing Page</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <section class="section">
+        <div class="circle"></div>
+        <header class="header">
+            <a href="#"><img src="/Images/logo.png" alt="Starbucks-Logo" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu()"></div>
+            <ul class="list_elem">
+                <li class="list_item"><a href="#" class="list_item_link">Home</a></li>
+                <li class="list_item"><a href="#" class="list_item_link">Menu</a></li>
+                <li class="list_item"><a href="#" class="list_item_link">What's New</a></li>
+                <li class="list_item"><a href="#" class="list_item_link">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2 class="content_heading">It's not just a Coffee <br><span>It's Starbucks</span></h2>
+                <p class="content_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, adipisci
+                    voluptatem! Eligendi adipisci fuga illum aspernatur, mollitia optio quis alias rerum nobis sed eius
+                    Lorem ipsum dolor.
+                </p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="/Images/img1.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li class="thumb_list-item"><img src="/Images/thumb1.png"
+                    onclick="imgSlider('/Images/img1.png');changeBgColor('#017143')"></li>
+            <li class="thumb_list-item"><img src="/Images/thumb2.png"
+                    onclick="imgSlider('/Images/img2.png');changeBgColor('#eb7495')"></li>
+            <li class="thumb_list-item"><img src="/Images/thumb3.png"
+                    onclick="imgSlider('/Images/img3.png');changeBgColor('#d752b1')"></li>
+        </ul>
+        <ul class="social">
+            <li class="social_list-item"><a href="#" class="social_link"><img src="/Images/facebook.png"></a></li>
+            <li class="social_list-item"><a href="#" class="social_link"><img src="/Images/instagram.png"></a></li>
+            <li class="social_list-item"><a href="#" class="social_link"><img src="/Images/twitter.png"></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(image) {
+            document.querySelector('.starbucks').src = image;
+        }
+        function changeBgColor(color) {
+            let circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+        function toggleMenu() {
+            let menuToggle =document.querySelector('.toggle');
+            let listElem = document.querySelector('.list_elem')
+            menuToggle.classList.toggle('active');
+            listElem.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
